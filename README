@@ -1,1 +1,3 @@
-Simple LaTeX template for diary with Czech names.
+Simple LaTeX template for diary with names.
+
+Edit Makefile for generating desired year and language.

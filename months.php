@@ -1,10 +1,13 @@
 #!/usr/bin/php
 <?php
 date_default_timezone_set('Europe/Prague');
-setlocale(LC_ALL,'cs_CZ.UTF8');
-require('events.cs_CZ.php');
 
 $year = $argv[1];
+$lang = $argv[2];
+
+setlocale(LC_ALL,$lang.'.UTF8');
+require('events.'.$lang.'.php');
+
 
 for($month=1;$month<=12;$month++){
 	$firstday=strtotime("$month/1/$year 12:00:00");
