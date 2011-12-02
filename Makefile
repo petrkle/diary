@@ -1,6 +1,9 @@
+YEAR=2012
+
 diar:
-	./mesice.php
-	pdflatex -interaction=batchmode diar.tex
+	./months.php ${YEAR}
+	cp diary.tex diary-${YEAR}.tex
+	pdflatex -interaction=batchmode diary-${YEAR}.tex
 
 clean:
-	rm -rf mesic-* diar.log diar.aux diar.pdf
+	rm -rf month-* diary-*
