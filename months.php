@@ -20,10 +20,10 @@ for($month=1;$month<=12;$month++){
 
 			fwrite($file,'\section*{'.$day.'. '.$month_h.' '.$year.'}'."\n");
 			
-			fwrite($file,'\\ifthenelse{\\isodd{\\thepage}}{}{\\hfill}');
+			fwrite($file,'\\ifthenelse{\\isodd{\\thepage}}{\\hfill}{}');
 			fwrite($file,'\\large{'.strftime('%A',$thisday).'}'."\n\n\n");
 
-			fwrite($file,'\\ifthenelse{\\isodd{\\thepage}}{}{\\hfill}');
+			fwrite($file,'\\ifthenelse{\\isodd{\\thepage}}{\\hfill}{}');
 			fwrite($file,'\\noindent\\large{'.$events[$month.'.'.$day].'}'."\n");
 
 			for($baz=0;$baz<21;$baz++){
