@@ -1,5 +1,5 @@
-YEAR=2016
-LANG=cs_CZ
+YEAR:=$(shell date -d 'next year' +%Y)
+LANG:=cs_CZ
 
 pdf:
 	./months.php ${YEAR} ${LANG}
@@ -7,4 +7,4 @@ pdf:
 	pdflatex -interaction=batchmode diary-${YEAR}.${LANG}.tex
 
 clean:
-	rm -rf month-* diary-*
+	rm -rf month-* diary-* *.log

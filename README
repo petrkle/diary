@@ -1,3 +1,5 @@
 Simple LaTeX template for diary with names.
 
-Edit Makefile for generating desired year and language.
+Example:
+
+	make pdf LANG=sk_SK YEAR=2020
